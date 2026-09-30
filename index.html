@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aderit Soporte Técnico Hermosillo | A domicilio</title>
+<meta name="description" content="Soporte técnico a domicilio en Hermosillo: computadoras lentas, virus, formateo, limpieza de laptops, WiFi, impresoras y limpieza de paneles solares. Cotiza por WhatsApp.">
+<meta property="og:title" content="Aderit Soporte Técnico Hermosillo">
+<meta property="og:description" content="Voy a tu casa u oficina. Computadoras, internet, impresoras y paneles solares. Cotiza por WhatsApp.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#10151c; --ink-soft:#4a5563; --paper:#fbf8f3; --card:#ffffff;
+    --sun:#ff8a1f; --sun-deep:#e0660a; --sky:#0f6fb8; --wa:#1fa855; --line:#e8e1d6;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Inter,system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55;font-size:17px}
+  h1,h2,h3{font-family:Archivo,Inter,sans-serif;line-height:1.1}
+  a{color:inherit}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+
+  header{position:sticky;top:0;z-index:10;background:rgba(251,248,243,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+  .logo{font-family:Archivo;font-weight:900;font-size:20px;text-decoration:none;letter-spacing:-.02em}
+  .logo span{color:var(--sun)}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;text-decoration:none;border-radius:999px;padding:14px 24px;transition:transform .15s,box-shadow .15s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-wa{background:var(--wa);color:#fff;box-shadow:0 8px 22px rgba(31,168,85,.3)}
+  .btn-sm{padding:9px 16px;font-size:15px}
+  .btn-ghost{border:2px solid var(--ink);color:var(--ink)}
+  .wa-ico{width:20px;height:20px;fill:currentColor}
+
+  .hero{position:relative;overflow:hidden;padding:72px 0 80px}
+  .hero::before{content:"";position:absolute;right:-160px;top:-160px;width:520px;height:520px;border-radius:50%;
+    background:radial-gradient(circle,#ffb366 0%,#ff8a1f 45%,rgba(255,138,31,0) 70%);opacity:.55}
+  .hero .wrap{position:relative}
+  .tag{display:inline-block;background:var(--ink);color:#fff;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border-radius:6px;margin-bottom:22px}
+  .hero h1{font-size:clamp(38px,7vw,72px);font-weight:900;letter-spacing:-.03em;max-width:13ch}
+  .hero h1 em{font-style:normal;color:var(--sun-deep)}
+  .hero p{font-size:clamp(18px,2.3vw,21px);color:var(--ink-soft);max-width:560px;margin:22px 0 32px}
+  .cta-row{display:flex;flex-wrap:wrap;gap:12px}
+  .trust{display:flex;flex-wrap:wrap;gap:22px;margin-top:40px;font-size:15px;color:var(--ink-soft)}
+  .trust b{color:var(--ink)}
+
+  section{padding:72px 0}
+  .kicker{color:var(--sun-deep);font-weight:600;font-size:14px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px}
+  h2{font-size:clamp(30px,4.5vw,44px);font-weight:900;letter-spacing:-.02em;margin-bottom:34px;max-width:20ch}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+  .svc{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px;transition:border-color .2s}
+  .svc:hover{border-color:var(--sun)}
+  .svc .ico{font-size:30px;margin-bottom:14px}
+  .svc h3{font-size:20px;margin-bottom:8px}
+  .svc p{color:var(--ink-soft);font-size:15.5px}
+  .svc.solar{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .svc.solar p{color:#c9d1db}
+
+  .about{background:var(--ink);color:#fff}
+  .about .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center}
+  .about h2{color:#fff}
+  .about p{color:#c9d1db;margin-bottom:16px}
+  .creds{list-style:none;display:grid;gap:12px}
+  .creds li{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:16px 18px}
+  .creds b{display:block;font-family:Archivo;font-size:17px;color:var(--sun)}
+
+  .steps{counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px}
+  .step{counter-increment:s;padding-top:6px}
+  .step::before{content:counter(s);display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--sun);color:#fff;font-family:Archivo;font-weight:900;font-size:20px;margin-bottom:14px}
+  .step h3{font-size:19px;margin-bottom:6px}
+  .step p{color:var(--ink-soft);font-size:15.5px}
+
+  details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-bottom:10px}
+  summary{font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
+  summary::after{content:"+";font-family:Archivo;font-size:22px;line-height:1;color:var(--sun-deep)}
+  details[open] summary::after{content:"–"}
+  details p{color:var(--ink-soft);margin-top:10px;font-size:15.5px}
+
+  .final{text-align:center;background:linear-gradient(135deg,#ff8a1f,#e0660a);color:#fff;border-radius:28px;padding:56px 24px;margin:0 20px}
+  .final h2{color:#fff;margin:0 auto 14px}
+  .final p{opacity:.92;margin-bottom:28px}
+  .final .btn-wa{background:#fff;color:var(--ink);box-shadow:0 10px 26px rgba(0,0,0,.18)}
+  .final .btn-wa .wa-ico{fill:var(--wa)}
+
+  footer{padding:40px 0 100px;text-align:center;color:var(--ink-soft);font-size:14px}
+
+  .float{position:fixed;right:18px;bottom:18px;z-index:20;width:60px;height:60px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 10px 26px rgba(31,168,85,.45)}
+  .float .wa-ico{width:30px;height:30px;fill:#fff}
+
+  @media (max-width:760px){
+    .about .wrap{grid-template-columns:1fr}
+    .hero{padding:48px 0 60px}
+    section{padding:56px 0}
+    header .btn-sm span{display:none}
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute">
+  <symbol id="wa" viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 4.9L2 22l5.2-1.4c1.4.8 3 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3C4 15.1 3.6 13.6 3.6 12 3.6 7.4 7.4 3.6 12 3.6s8.4 3.8 8.4 8.4-3.8 8.2-8.4 8.2z"/></symbol>
+</svg>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#">Aderit<span>.</span> Soporte</a>
+    <a class="btn btn-wa btn-sm" href="https://wa.me/526621576472?text=Hola%20Orlando%2C%20vi%20tu%20p%C3%A1gina%20y%20quiero%20cotizar%20un%20servicio" target="_blank" rel="noopener">
+      <svg class="wa-ico"><use href="#wa"/></svg><span>Cotizar por WhatsApp</span>
+    </a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <span class="tag">Hermosillo · a domicilio</span>
+      <h1>¿Se te alentó la compu? <em>Voy a tu casa.</em></h1>
+      <p>Soporte técnico a domicilio en Hermosillo. Arreglo computadoras, internet e impresoras, y limpio paneles solares. Te explico todo claro, sin rollos.</p>
+      <div class="cta-row">
+        <a class="btn btn-wa" href="https://wa.me/526621576472?text=Hola%20Orlando%2C%20vi%20tu%20p%C3%A1gina%20y%20quiero%20cotizar%20un%20servicio" target="_blank" rel="noopener">
+          <svg class="wa-ico"><use href="#wa"/></svg>Cotiza por WhatsApp
+        </a>
+        <a class="btn btn-ghost" href="#servicios">Ver servicios</a>
+      </div>
+      <div class="trust">
+        <div><b>Ingeniero</b> en Mecatrónica (UNISON)</div>
+        <div><b>+5 años</b> en soporte TI</div>
+        <div><b>Cotización</b> sin compromiso</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicios">
+    <div class="wrap">
+      <div class="kicker">Servicios</div>
+      <h2>Lo que te resuelvo</h2>
+      <div class="grid">
+        <div class="svc"><div class="ico">🐢</div><h3>Compu lenta o con virus</h3><p>Limpieza de virus, programas basura y optimización para que vuelva a jalar.</p></div>
+        <div class="svc"><div class="ico">💿</div><h3>Formateo y Windows</h3><p>Instalación de Windows y tus programas, dejando tu equipo como nuevo.</p></div>
+        <div class="svc"><div class="ico">🔥</div><h3>Limpieza de laptops y PCs</h3><p>Quito el polvo y cambio la pasta térmica. Clave con el calorón de Hermosillo.</p></div>
+        <div class="svc"><div class="ico">📶</div><h3>Internet, WiFi e impresoras</h3><p>Configuro tu módem, mejoro la señal y dejo tu impresora funcionando.</p></div>
+        <div class="svc"><div class="ico">🗂️</div><h3>Respaldo de información</h3><p>Rescato y respaldo tus fotos y documentos antes de que se pierdan.</p></div>
+        <div class="svc solar"><div class="ico">☀️</div><h3>Limpieza de paneles solares</h3><p>Limpieza y revisión de tus paneles. Con polvo producen menos; limpios te ahorran más.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="wrap">
+      <div>
+        <div class="kicker">Quién te atiende</div>
+        <h2>Soy Orlando, y voy yo mismo</h2>
+        <p>No te mando a un desconocido: yo llego a tu casa u oficina, reviso tu equipo contigo y te digo qué tiene antes de cobrarte.</p>
+        <p>He trabajado años dando soporte técnico a empresas y también instalando paneles solares, así que sé lo que hago en los dos.</p>
+      </div>
+      <ul class="creds">
+        <li><b>Ingeniería en Mecatrónica</b>Universidad de Sonora</li>
+        <li><b>Soporte TI empresarial</b>Soporte a usuarios, redes y equipos de cómputo</li>
+        <li><b>Técnico fotovoltaico</b>Experiencia en instalación de paneles solares</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="kicker">Cómo funciona</div>
+      <h2>Fácil y rápido</h2>
+      <div class="steps">
+        <div class="step"><h3>Me escribes</h3><p>Por WhatsApp me cuentas qué le pasa a tu equipo. Si puedes, manda foto.</p></div>
+        <div class="step"><h3>Te cotizo</h3><p>Te paso precio y agendamos el día y la hora que te acomoden.</p></div>
+        <div class="step"><h3>Voy y lo arreglo</h3><p>Llego a tu casa u oficina y te lo dejo funcionando.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap" style="max-width:760px">
+      <div class="kicker">Preguntas</div>
+      <h2>Lo que más me preguntan</h2>
+      <details><summary>¿Cobras por ir a revisar?</summary><p>Escríbeme por WhatsApp con lo que le pasa a tu equipo y te digo el costo antes de ir, sin sorpresas.</p></details>
+      <details><summary>¿A qué zonas vas?</summary><p>A todo Hermosillo. Pregúntame por tu colonia y lo vemos.</p></details>
+      <details><summary>¿Se pierde mi información al formatear?</summary><p>No si lo hacemos bien: antes de formatear respaldo tus fotos y documentos.</p></details>
+      <details><summary>¿Cada cuánto se limpian los paneles solares?</summary><p>Depende del polvo de tu zona, pero en Hermosillo conviene revisarlos varias veces al año. Te digo cómo están cuando los vea.</p></details>
+    </div>
+  </section>
+
+  <div class="final">
+    <h2>¿Tu equipo anda fallando?</h2>
+    <p>Mándame WhatsApp y te cotizo hoy mismo.</p>
+    <a class="btn btn-wa" href="https://wa.me/526621576472?text=Hola%20Orlando%2C%20vi%20tu%20p%C3%A1gina%20y%20quiero%20cotizar%20un%20servicio" target="_blank" rel="noopener">
+      <svg class="wa-ico"><use href="#wa"/></svg>662 157 6472
+    </a>
+  </div>
+</main>
+
+<footer>
+  Aderit Soporte Técnico Hermosillo · Servicio a domicilio en Hermosillo, Sonora
+</footer>
+
+<a class="float" href="https://wa.me/526621576472?text=Hola%20Orlando%2C%20vi%20tu%20p%C3%A1gina%20y%20quiero%20cotizar%20un%20servicio" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg class="wa-ico"><use href="#wa"/></svg>
+</a>
+
+</body>
+</html>
